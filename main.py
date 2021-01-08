@@ -6,16 +6,16 @@ year = int(input("Which year do you want to check? "))
 
 #LEAP YEAR rules: on every year that is evenly divisible by 4 **except** every year that is evenly divisible by 100 **unless** the year is also evenly divisible by 400
 
-if year%4==0:
+if year%4!=0:
+  print("Not leap year.")
+else:
   if year%100==0:
     if year%400!=0:
-      print("This year is leap year.")
+      print("Not leap year.")
     elif year%400==0:
-      print("This year is not leap year.")
-  else:
-    print("This is leap year.")
-else:
-  print("This is not leap year.")
+      print("Leap year.")
+  elif year%100!=0:
+    print("Leap year.")
 
 
 
